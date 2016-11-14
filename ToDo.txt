@@ -1,0 +1,7 @@
+
+- parameter to do only backup copy back and duplicheck
+
+
+cd /home/ethsri/Temp4BackupIomega/Private_*
+for myfile in $(find . -type f -name \*.txt) ; do meld $myfile ~/Documents/Private/${myfile#./} ; done
+for myfile in $(find . -type f -name \*.jpg) ; do eog ${myfile} ; done
