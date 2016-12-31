@@ -58,7 +58,7 @@ cp -rp "${BACKUP_PATH}/${private_dir_on_iomega}" ${hdd_tempdir_for_oldbackup}/
 exit_if_error $? "copying ${private_dir_on_iomega} to ${hdd_tempdir_for_oldbackup}"
 
 echo "Removing old directories on the backup device..."
-for dir in "${DIRS_TO_BACKUP}"
+for dir in ${DIRS_TO_BACKUP}
 do
     if [ -d "${BACKUP_PATH}/${dir}_${old_backup_date}" ]
     then
